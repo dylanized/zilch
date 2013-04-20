@@ -1,0 +1,19 @@
+# ZILCH INTERNET BLOCKER
+
+ZDIR=~/.zilch
+ZFILE='on'			# default blockfile
+HOSTSFILE='/etc/hosts'
+
+function zilch() {
+	if [ $1 == "import" ]; then
+		# IMPORTING HOSTS FILE
+		cp $HOSTSFILE $ZDIR/on.txt
+		cp $HOSTSFILE $DIR/off.txt
+	else
+		# BLOCKING OR UNBLOCKING
+		if [ $1 ]; then
+                	ZFILE=$1
+		fi
+		sudo cp $ZDIR/$ZFILE $HOSTSFILE
+	fi
+}
