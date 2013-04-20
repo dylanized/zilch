@@ -6,11 +6,17 @@ HOSTSFILE='/etc/hosts'		# real hosts file
 ZCOMMAND='on'				# default blockfile
 ZMSG='Blocking sites...'	# default message
 
+ZSTATUS='unset'
+
 function zilch() {
 	if [ "$1" = "import" ]; then
 		# IMPORTING HOSTS FILE
 		cp -i $HOSTSFILE $ZDIR/on.txt
 		cp -i $HOSTSFILE $ZDIR/off.txt
+	elif [ "$1" = "status" ]; then
+		echo ""
+		echo "Zilch status is '$ZSTATUS'"	
+		echo ""
 	else
 		# BLOCKING OR UNBLOCKING
 		
@@ -27,6 +33,7 @@ function zilch() {
 		# RUN FILE OPERATION
 		ZFILE="$ZDIR/$ZCOMMAND.txt"
 		if [ -f $ZFILE ]; then
+			ZSTATUS=$ZCOMMAND
 			echo ""
 			echo "$ZMSG"
 			sudo cp $ZFILE $HOSTSFILE

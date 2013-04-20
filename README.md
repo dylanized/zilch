@@ -21,6 +21,10 @@ Block sites:
 Unblock sites:
 
     zilch off
+    
+Check the status with:
+
+    zilch status
 
 How to customize:
 ---
