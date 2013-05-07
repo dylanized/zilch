@@ -12,8 +12,8 @@ function zilch() {
 
 	if [ "$1" = "import" ]; then
 		# IMPORTING HOSTS FILE
-		cp -i $HOSTSFILE $ZDIR/on.txt
-		cp -i $HOSTSFILE $ZDIR/off.txt
+		cp -i $HOSTSFILE $ZDIR/hosts/on.txt
+		cp -i $HOSTSFILE $ZDIR/hosts/off.txt
 	elif [ "$1" = "status" ]; then
 		echo ""
 		echo "Zilch status is '$ZSTATUS'"	

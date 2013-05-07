@@ -31,3 +31,4 @@ How to customize:
 
 - edit the script to change default folders
 - you can create additional blockfiles in the /hosts folder, like "socialmedia.txt". Then you could run "zilch socialmedia" to apply this list
+- you can also use "zon" and "zoff" shortcuts
