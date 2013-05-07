@@ -34,7 +34,7 @@ function zilch() {
 		fi
 		
 		# RUN FILE OPERATION
-		ZFILE="$ZDIR/$ZCOMMAND.txt"
+		ZFILE="$ZDIR/lib/$ZCOMMAND.txt"
 		if [ -f $ZFILE ]; then
 			ZSTATUS=$ZCOMMAND
 			echo ""
